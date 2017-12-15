@@ -1,0 +1,30 @@
+﻿<Window x:Class="GUI.WindowSaveMatch"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI"
+        mc:Ignorable="d"
+        Title="WindowSaveMatch" Height="400" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name = "Save_Match" Content="Save Match" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="26" Margin="10,16,0,0" Click="Save_Match_Click"/>
+        <TextBox x:Name="InputTournament" HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="129,53,0,0"/>
+        <Label x:Name ="TournamentName" Content="Tournament Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,54,0,0" Height="27" Width="110"/>
+        <Label x:Name ="RoundInput" Content="Round" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,82,0,0"/>
+        <TextBox x:Name ="RoundNumber"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="129,86,0,0" TextChanged="RoundNumber_TextChanged" />
+        <TextBox x:Name ="Team1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" IsReadOnly="True" Text="" VerticalAlignment="Top" Width="120" Margin="129,114,0,0"/>
+        <TextBox x:Name ="Team2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" IsReadOnly="True" Text="" VerticalAlignment="Top" Width="120" Margin="129,142,0,0"/>
+        <TextBox x:Name ="WinningTeams" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="129,170,0,0"/>
+        <Label x:Name ="Team1Input" Content="Team1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,108,0,0"/>
+        <Label x:Name ="Team2Input" Content="Team2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,134,0,0"/>
+        <Label x:Name ="WinningTeamInput" Content="Winning teams" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,165,0,0"/>
+        <Button x:Name="ButtonNext" Content="Next" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="174,209,0,0" Click="ButtonNext_Click"/>
+        <Button x:Name ="ButtonPrevious" Content="Previous" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="74,209,0,0" Click="ButtonPrevious_Click"/>
+        <Button x:Name ="ScheduleInput" Content="Make a new Round" HorizontalAlignment="Left" VerticalAlignment="Top" Width="311" Margin="17,277,0,0" Height="57" Click="ScheduleInput_Click"/>
+
+    </Grid>
+</Window>

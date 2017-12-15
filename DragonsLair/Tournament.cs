@@ -10,6 +10,7 @@ namespace DragonsLair
         public State Status { get; set; }
       
         private TeamRepo teams = new TeamRepo();
+
         private List<Round> rounds = new List<Round>();
 
         public Tournament(string tournamentName) : this(tournamentName, State.STANDBY)
@@ -44,7 +45,7 @@ namespace DragonsLair
         
         public Round GetRound(int idx)
         {
-            return rounds[idx];
+            return rounds[idx - 1];
         }
 
         public void AddRound(Round r)

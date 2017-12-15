@@ -14,10 +14,6 @@ namespace DragonsLair
                     if (m.Winner != null)
                         winningTeams.Add(m.Winner);
                 }
-                if (FreeRider != null)
-                {
-                    winningTeams.Add(FreeRider);//A freeRider is a winner pr definition
-                }
                 return winningTeams;
             }
         }
@@ -56,16 +52,15 @@ namespace DragonsLair
         public Match GetMatch(string teamName1, string teamName2)
         {
             Match foundMatch = null;
-            bool found = false;
             int i = 0;
-            while (!found && (i < matches.Count))
+            while ((foundMatch == null) && (i < matches.Count))
             {
-                Match current = matches[i];
-                if (current.FirstOpponent.Name.Equals(teamName1) && current.SecondOpponent.Name.Equals(teamName2))
+                Match match = matches[i];
+                if (match.FirstOpponent.Name.Equals(teamName1) && match.SecondOpponent.Name.Equals(teamName2))
                 {
-                    foundMatch = current;
-                    found = true;
+                    foundMatch = match;
                 }
+                i++;
             }
 
             return foundMatch;

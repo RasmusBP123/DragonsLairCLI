@@ -25,7 +25,6 @@ namespace DragonsLair
             {
                 if (players[idx].Name.Equals(name))
                 {
-                    foundPlayer = true;
                     foundPlayer = players[idx];
                 }
                 idx++;

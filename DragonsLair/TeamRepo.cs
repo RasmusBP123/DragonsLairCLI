@@ -20,13 +20,11 @@ namespace DragonsLair
         public Team GetTeam(string name)
         {
             Team team = null;
-            bool found = false;
             int idx = 0;
-            while (!found && (idx < teams.Count))
+            while ((team == null) && (idx < teams.Count))
             {
                 if (teams[idx].Name.Equals(name))
                 {
-                    found = true;
                     team = teams[idx];
                 }
                 idx++;

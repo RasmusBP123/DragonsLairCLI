@@ -20,13 +20,11 @@ namespace DragonsLair
         public Tournament GetTournament(string name)
         {
             Tournament tournament = null;
-            bool found = false;
             int idx = 0;
-            while(!found && (idx < tournaments.Count))
+            while((tournament == null) && (idx < tournaments.Count))
             {
                 if (tournaments[idx].Name.Equals(name))
                 {
-                    found = true;
                     tournament = tournaments[idx];
                 }
                 idx++;

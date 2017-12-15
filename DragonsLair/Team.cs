@@ -16,5 +16,10 @@ namespace DragonsLair
         {
             players.Add(p);
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

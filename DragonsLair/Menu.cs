@@ -5,7 +5,7 @@ namespace DragonsLair
     public class Menu
     {
         private Controller control = null;
-        
+
         public Menu()
         {
             control = new Controller();
@@ -24,13 +24,16 @@ namespace DragonsLair
                         running = false;
                         break;
                     case "1":
-                        ShowScore();
+                        CreateTournament();
                         break;
                     case "2":
                         ScheduleNewRound();
                         break;
                     case "3":
                         SaveMatch();
+                        break;
+                    case "4":
+                        ShowScore();
                         break;
                     default:
                         Console.WriteLine("Ugyldigt valg.");
@@ -44,9 +47,10 @@ namespace DragonsLair
         {
             Console.WriteLine("Dragons Lair");
             Console.WriteLine();
-            Console.WriteLine("1. Præsenter ligastilling");
+            Console.WriteLine("1. Etabler liga");
             Console.WriteLine("2. Planlæg runde i liga");
             Console.WriteLine("3. Afvikl kamp");
+            Console.WriteLine("4. Præsenter ligastilling");
             Console.WriteLine();
             Console.WriteLine("0. Exit");
         }
@@ -57,7 +61,12 @@ namespace DragonsLair
             Console.Write("Indtast dit valg: ");
             return Console.ReadLine();
         }
-        
+
+        private void CreateTournament()
+        {
+            Tournament tournament = new Tournament(GetTournamentname());
+        }
+
         private void ShowScore()
         {
             string tournamentName = GetTournamentname();
@@ -73,9 +82,7 @@ namespace DragonsLair
         private String GetTournamentname()
         {
             Console.Write("Angiv navn på liga: ");
-            string tournamentName = Console.ReadLine();
-            Console.Clear();
-            return tournamentName;
+            return Console.ReadLine();
         }
 
         private void SaveMatch()
